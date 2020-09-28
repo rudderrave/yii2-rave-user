@@ -1,0 +1,22 @@
+{
+  "name": "rudderrave/yii2-rave-user",
+  "description": "User Module For Yee CMS use rest",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Rave",
+      "email": "rudder.rave@gmail.com"
+    }
+  ],
+  "require": {
+    "rudderrave/yii2-rave-core-rest": "dev-master",
+    "rudderrave/yii2-rave-auth": "dev-master",
+    "webvimark/date-range-picker": "~1.0.2",
+    "ikimea/browser": "~1.14"
+  },
+  "autoload": {
+    "psr-4": {
+      "ravesoft\\user\\": ""
+    }
+  }
+}
