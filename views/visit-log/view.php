@@ -7,9 +7,9 @@ use yii\widgets\DetailView;
  * @var ravesoft\models\UserVisitLog $model
  */
 
-$this->title = Yii::t('yee/user', 'Log №{id}', ['id' => $model->id]);
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Users'), 'url' => ['/user/default/index']];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Visit Log'), 'url' => ['/user/visit-log/index']];
+$this->title = Yii::t('rave/user', 'Log №{id}', ['id' => $model->id]);
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Users'), 'url' => ['/user/default/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Visit Log'), 'url' => ['/user/visit-log/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

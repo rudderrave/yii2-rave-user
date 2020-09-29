@@ -7,9 +7,9 @@ use yii\helpers\Html;
  * @var ravesoft\models\AuthItemGroup $model
  */
 
-$this->title = Yii::t('yee/user', 'Update Permission Group');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Users'), 'url' => ['/user/default/index']];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Permission Groups'), 'url' => ['/user/permission-groups/index']];
+$this->title = Yii::t('rave/user', 'Update Permission Group');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Users'), 'url' => ['/user/default/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Permission Groups'), 'url' => ['/user/permission-groups/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

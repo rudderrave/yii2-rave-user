@@ -38,8 +38,8 @@ class RoleController extends BaseController
             ->all();
 
         $permissions = Permission::find()
-            ->andWhere(Yii::$app->yee->auth_item_table . '.name != :commonPermissionName',
-                [':commonPermissionName' => Yii::$app->yee->commonPermissionName])
+            ->andWhere(Yii::$app->rave->auth_item_table . '.name != :commonPermissionName',
+                [':commonPermissionName' => Yii::$app->rave->commonPermissionName])
             ->joinWith('group')
             ->all();
 
@@ -86,7 +86,7 @@ class RoleController extends BaseController
         Role::addChildren($role->name, $toAdd);
         Role::removeChildren($role->name, $toRemove);
 
-        Yii::$app->session->setFlash('crudMessage', Yii::t('yee', 'Saved'));
+        Yii::$app->session->setFlash('crudMessage', Yii::t('rave', 'Saved'));
 
         return $this->redirect(['view', 'id' => $id]);
     }

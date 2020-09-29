@@ -13,17 +13,17 @@ use ravesoft\helpers\Html;
 use ravesoft\models\User;
 use yii\helpers\ArrayHelper;
 
-$this->title = Yii::t('yee/user', '{permission} Permission Settings', ['permission' => $item->description]);
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Users'), 'url' => ['/user/default/index']];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Permissions'), 'url' => ['/user/role/index']];
+$this->title = Yii::t('rave/user', '{permission} Permission Settings', ['permission' => $item->description]);
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Users'), 'url' => ['/user/default/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Permissions'), 'url' => ['/user/role/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
     <div class="row">
         <div class="col-sm-12">
             <h3 class="lte-hide-title page-title"><?= Html::encode($this->title) ?></h3>
-            <?= Html::a(Yii::t('yee', 'Edit'), ['update', 'id' => $item->name], ['class' => 'btn btn-sm btn-primary']) ?>
-            <?= Html::a(Yii::t('yee', 'Create'), ['create'], ['class' => 'btn btn-sm btn-primary']) ?>
+            <?= Html::a(Yii::t('rave', 'Edit'), ['update', 'id' => $item->name], ['class' => 'btn btn-sm btn-primary']) ?>
+            <?= Html::a(Yii::t('rave', 'Create'), ['create'], ['class' => 'btn btn-sm btn-primary']) ?>
         </div>
     </div>
 
@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="panel-heading">
                     <strong>
                         <span class="glyphicon glyphicon-th"></span>
-                        <?= Yii::t('yee/user', 'Child permissions') ?>
+                        <?= Yii::t('rave/user', 'Child permissions') ?>
                     </strong>
                 </div>
                 <div class="panel-body">
@@ -58,7 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <hr/>
                     <?php if (User::hasPermission('manageRolesAndPermissions')): ?>
-                        <?= Html::submitButton(Yii::t('yee', 'Save'), ['class' => 'btn btn-primary btn-sm']) ?>
+                        <?= Html::submitButton(Yii::t('rave', 'Save'), ['class' => 'btn btn-primary btn-sm']) ?>
                     <?php endif; ?>
 
                     <?= Html::endForm() ?>
@@ -70,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <strong>
-                        <span class="glyphicon glyphicon-th"></span><?= Yii::t('yee/user', 'Routes') ?>
+                        <span class="glyphicon glyphicon-th"></span><?= Yii::t('rave/user', 'Routes') ?>
                     </strong>
                 </div>
 
@@ -81,21 +81,21 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="row">
                         <div class="col-sm-3">
                             <?php if (User::hasPermission('manageRolesAndPermissions')): ?>
-                                <?= Html::submitButton(Yii::t('yee', 'Save'), ['class' => 'btn btn-primary btn-sm']) ?>
+                                <?= Html::submitButton(Yii::t('rave', 'Save'), ['class' => 'btn btn-primary btn-sm']) ?>
                             <?php endif; ?>
                         </div>
 
                         <div class="col-sm-6">
                             <input id="search-in-routes" autofocus="on" type="text" class="form-control input-sm"
-                                   placeholder="<?= Yii::t('yee/user', 'Search route') ?>">
+                                   placeholder="<?= Yii::t('rave/user', 'Search route') ?>">
                         </div>
 
                         <!--div class="col-sm-3 text-right">
                             <span id="show-only-selected-routes" class="btn btn-default btn-sm">
-				<i class="fa fa-minus"></i> <?= Yii::t('yee/user', 'Show only selected') ?>
+				<i class="fa fa-minus"></i> <?= Yii::t('rave/user', 'Show only selected') ?>
                             </span>
                             <span id="show-all-routes" class="btn btn-default btn-sm hide">
-				<i class="fa fa-plus"></i> <?= Yii::t('yee/user', 'Show all') ?>
+				<i class="fa fa-plus"></i> <?= Yii::t('rave/user', 'Show all') ?>
                             </span>
                         </div-->
                     </div>
@@ -122,7 +122,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <hr/>
                     <?php if (User::hasPermission('manageRolesAndPermissions')): ?>
-                        <?= Html::submitButton(Yii::t('yee', 'Save'), ['class' => 'btn btn-primary btn-sm']) ?>
+                        <?= Html::submitButton(Yii::t('rave', 'Save'), ['class' => 'btn btn-primary btn-sm']) ?>
                     <?php endif; ?>
 
                     <?= Html::endForm() ?>

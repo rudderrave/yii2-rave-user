@@ -23,13 +23,13 @@ class UserPermissionController extends BaseController
         $user = User::findOne($id);
 
         if (!$user) {
-            throw new NotFoundHttpException(Yii::t('yee/user', 'User not found'));
+            throw new NotFoundHttpException(Yii::t('rave/user', 'User not found'));
         }
 
         $permissionsByGroup = [];
         $permissions = Permission::find()
             ->andWhere([
-                Yii::$app->yee->auth_item_table . '.name' => array_keys(Permission::getUserPermissions($user->id))
+                Yii::$app->rave->auth_item_table . '.name' => array_keys(Permission::getUserPermissions($user->id))
             ])
             ->joinWith('group')
             ->all();
@@ -49,7 +49,7 @@ class UserPermissionController extends BaseController
     public function actionSetRoles($id)
     {
         if (!Yii::$app->user->isSuperadmin AND Yii::$app->user->id == $id) {
-            Yii::$app->session->setFlash('error', Yii::t('yee/user', 'You can not change own permissions'));
+            Yii::$app->session->setFlash('error', Yii::t('rave/user', 'You can not change own permissions'));
             return $this->redirect(['set', 'id' => $id]);
         }
 
@@ -69,7 +69,7 @@ class UserPermissionController extends BaseController
             User::assignRole($id, $role);
         }
 
-        Yii::$app->session->setFlash('crudMessage', Yii::t('yee', 'Saved'));
+        Yii::$app->session->setFlash('crudMessage', Yii::t('rave', 'Saved'));
 
         return $this->redirect(['set', 'id' => $id]);
     }

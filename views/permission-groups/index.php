@@ -12,8 +12,8 @@ use yii\widgets\Pjax;
  * @var yii\data\ActiveDataProvider $dataProvider
  * @var ravesoft\user\models\search\AuthItemGroupSearch $searchModel
  */
-$this->title = Yii::t('yee/user', 'Permission Groups');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Users'), 'url' => ['/user/default/index']];
+$this->title = Yii::t('rave/user', 'Permission Groups');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Users'), 'url' => ['/user/default/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row">
         <div class="col-sm-12">
             <h3 class="lte-hide-title page-title"><?= Html::encode($this->title) ?></h3>
-            <?= Html::a(Yii::t('yee', 'Add New'), ['create'], ['class' => 'btn btn-sm btn-primary']) ?>
+            <?= Html::a(Yii::t('rave', 'Add New'), ['create'], ['class' => 'btn btn-sm btn-primary']) ?>
         </div>
     </div>
 
@@ -48,7 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filterModel' => $searchModel,
                 'bulkActionOptions' => [
                     'gridId' => 'permission-grid',
-                    'actions' => [Url::to(['bulk-delete']) => Yii::t('yee', 'Delete')]
+                    'actions' => [Url::to(['bulk-delete']) => Yii::t('rave', 'Delete')]
                 ],
                 'columns' => [
                     ['class' => 'ravesoft\grid\CheckboxColumn', 'options' => ['style' => 'width:10px']],

@@ -66,13 +66,13 @@ class DefaultController extends BaseController
         $model = User::findOne($id);
 
         if (!$model) {
-            throw new NotFoundHttpException(Yii::t('yee/user', 'User not found'));
+            throw new NotFoundHttpException(Yii::t('rave/user', 'User not found'));
         }
 
         $model->scenario = 'changePassword';
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            Yii::$app->session->setFlash('crudMessage', Yii::t('yee/auth', 'Password has been updated'));
+            Yii::$app->session->setFlash('crudMessage', Yii::t('rave/auth', 'Password has been updated'));
             return $this->redirect(['change-password', 'id' => $model->id]);
         }
 

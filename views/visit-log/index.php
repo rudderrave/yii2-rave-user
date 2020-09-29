@@ -12,8 +12,8 @@ use yii\widgets\Pjax;
  * @var ravesoft\user\models\search\UserVisitLogSearch $searchModel
  */
 
-$this->title = Yii::t('yee/user', 'Visit Log');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Users'), 'url' => ['/user/default/index']];
+$this->title = Yii::t('rave/user', 'Visit Log');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Users'), 'url' => ['/user/default/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

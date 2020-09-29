@@ -3,7 +3,7 @@
 use ravesoft\helpers\Html;
 use ravesoft\models\User;
 use ravesoft\widgets\ActiveForm;
-use ravesoft\helpers\YeeHelper;
+use ravesoft\helpers\RaveHelper;
 
 /**
  * @var yii\web\View $this
@@ -58,7 +58,7 @@ use ravesoft\helpers\YeeHelper;
                             <?= $form->field($model, 'birth_day')->textInput(['maxlength' => 2]) ?>
                         </div>
                         <div class="col-md-4">
-                            <?= $form->field($model, 'birth_month')->dropDownList(YeeHelper::getMonthsList()) ?>
+                            <?= $form->field($model, 'birth_month')->dropDownList(RaveHelper::getMonthsList()) ?>
                         </div>
                         <div class="col-md-3">
                             <?= $form->field($model, 'birth_year')->textInput(['maxlength' => 4]) ?>
@@ -87,7 +87,7 @@ use ravesoft\helpers\YeeHelper;
                         <?= $form->field($model, 'phone')->textInput(['maxlength' => 24]) ?>
 
                         <?php if (User::hasPermission('bindUserToIp')): ?>
-                            <?= $form->field($model, 'bind_to_ip')->textInput(['maxlength' => 255])->hint(Yii::t('yee', 'For example') . ' : 123.34.56.78, 234.123.89.78') ?>
+                            <?= $form->field($model, 'bind_to_ip')->textInput(['maxlength' => 255])->hint(Yii::t('rave', 'For example') . ' : 123.34.56.78, 234.123.89.78') ?>
                         <?php endif; ?>
                         
                     </div>
@@ -118,11 +118,11 @@ use ravesoft\helpers\YeeHelper;
 
                         <div class="form-group ">
                             <?php if ($model->isNewRecord): ?>
-                                <?= Html::submitButton(Yii::t('yee', 'Create'), ['class' => 'btn btn-primary']) ?>
-                                <?= Html::a(Yii::t('yee', 'Cancel'), ['/user/default/index'], ['class' => 'btn btn-default']) ?>
+                                <?= Html::submitButton(Yii::t('rave', 'Create'), ['class' => 'btn btn-primary']) ?>
+                                <?= Html::a(Yii::t('rave', 'Cancel'), ['/user/default/index'], ['class' => 'btn btn-default']) ?>
                             <?php else: ?>
-                                <?= Html::submitButton(Yii::t('yee', 'Save'), ['class' => 'btn btn-primary']) ?>
-                                <?= Html::a(Yii::t('yee', 'Delete'), ['/user/default/delete', 'id' => $model->id], [
+                                <?= Html::submitButton(Yii::t('rave', 'Save'), ['class' => 'btn btn-primary']) ?>
+                                <?= Html::a(Yii::t('rave', 'Delete'), ['/user/default/delete', 'id' => $model->id], [
                                     'class' => 'btn btn-default',
                                     'data' => [
                                         'confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),

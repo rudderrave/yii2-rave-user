@@ -59,9 +59,9 @@ class Users extends DashboardWidget
     public function getDefaultOptions()
     {
         return [
-            ['label' => Yii::t('yee', 'Active'), 'icon' => 'ok', 'filterWhere' => ['status' => User::STATUS_ACTIVE]],
-            ['label' => Yii::t('yee', 'Inactive'), 'icon' => 'ok', 'filterWhere' => ['status' => User::STATUS_INACTIVE]],
-            ['label' => Yii::t('yee', 'Banned'), 'icon' => 'ok', 'filterWhere' => ['status' => User::STATUS_BANNED]],
+            ['label' => Yii::t('rave', 'Active'), 'icon' => 'ok', 'filterWhere' => ['status' => User::STATUS_ACTIVE]],
+            ['label' => Yii::t('rave', 'Inactive'), 'icon' => 'ok', 'filterWhere' => ['status' => User::STATUS_INACTIVE]],
+            ['label' => Yii::t('rave', 'Banned'), 'icon' => 'ok', 'filterWhere' => ['status' => User::STATUS_BANNED]],
         ];
     }
 }

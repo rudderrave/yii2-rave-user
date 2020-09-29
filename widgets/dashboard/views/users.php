@@ -9,7 +9,7 @@ $defaultAvatar = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg
 
     <div class="pull-<?= $position ?> col-lg-<?= $width ?> widget-height-<?= $height ?>">
         <div class="panel panel-default dw-widget">
-            <div class="panel-heading"><?= Yii::t('yee/user', 'Users') ?></div>
+            <div class="panel-heading"><?= Yii::t('rave/user', 'Users') ?></div>
             <div class="panel-body">
 
                 <?php if (count($recent)): ?>
@@ -23,19 +23,19 @@ $defaultAvatar = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg
 
                                 <div class="dw-user-info">
                                     <div>
-                                        <b><?= Yii::t('yee', 'Login') ?>:</b>
+                                        <b><?= Yii::t('rave', 'Login') ?>:</b>
                                         <a class="author"><?= $item->username ?></a>
                                     </div>
                                     <div>
-                                        <b><?= Yii::t('yee', 'E-mail') ?>:</b>
+                                        <b><?= Yii::t('rave', 'E-mail') ?>:</b>
                                         <span><?= $item->email ?></span>
                                     </div>
                                     <div>
-                                        <b><?= Yii::t('yee', 'Data') ?>:</b>
+                                        <b><?= Yii::t('rave', 'Data') ?>:</b>
                                         <span><?= "{$item->createdDate} {$item->createdTime}" ?></span>
                                     </div>
                                     <div>
-                                        <b><?= Yii::t('yee', 'Registration IP') ?>:</b>
+                                        <b><?= Yii::t('rave', 'Registration IP') ?>:</b>
                                         <span><?= $item->registration_ip ?></span>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@ $defaultAvatar = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg
                     </div>
 
                 <?php else: ?>
-                    <h4><em><?= Yii::t('yee/user', 'No users found.') ?></em></h4>
+                    <h4><em><?= Yii::t('rave/user', 'No users found.') ?></em></h4>
                 <?php endif; ?>
 
             </div>

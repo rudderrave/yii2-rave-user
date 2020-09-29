@@ -15,7 +15,7 @@ use yii\widgets\Pjax;
  * @var yii\data\ActiveDataProvider $dataProvider
  * @var ravesoft\user\models\search\UserSearch $searchModel
  */
-$this->title = Yii::t('yee/user', 'Users');
+$this->title = Yii::t('rave/user', 'Users');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row">
         <div class="col-sm-12">
             <h3 class="lte-hide-title page-title"><?= Html::encode($this->title) ?></h3>
-            <?= Html::a(Yii::t('yee', 'Add New'), ['/user/default/create'], ['class' => 'btn btn-sm btn-primary']) ?>
+            <?= Html::a(Yii::t('rave', 'Add New'), ['/user/default/create'], ['class' => 'btn btn-sm btn-primary']) ?>
         </div>
     </div>
 
@@ -72,17 +72,17 @@ $this->params['breadcrumbs'][] = $this->title;
                         'buttonsTemplate' => '{update} {delete} {permissions} {password}',
                         'buttons' => [
                             'permissions' => function ($url, $model, $key) {
-                                return Html::a(Yii::t('yee/user', 'Permissions'),
+                                return Html::a(Yii::t('rave/user', 'Permissions'),
                                     Url::to(['user-permission/set', 'id' => $model->id]), [
-                                        'title' => Yii::t('yee/user', 'Permissions'),
+                                        'title' => Yii::t('rave/user', 'Permissions'),
                                         'data-pjax' => '0'
                                     ]
                                 );
                             },
                             'password' => function ($url, $model, $key) {
-                                return Html::a(Yii::t('yee/user', 'Password'),
+                                return Html::a(Yii::t('rave/user', 'Password'),
                                     Url::to(['default/change-password', 'id' => $model->id]), [
-                                        'title' => Yii::t('yee/user', 'Password'),
+                                        'title' => Yii::t('rave/user', 'Password'),
                                         'data-pjax' => '0'
                                     ]
                                 );
@@ -132,9 +132,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         'class' => 'ravesoft\grid\columns\StatusColumn',
                         'attribute' => 'status',
                         'optionsArray' => [
-                            [User::STATUS_ACTIVE, Yii::t('yee', 'Active'), 'primary'],
-                            [User::STATUS_INACTIVE, Yii::t('yee', 'Inactive'), 'info'],
-                            [User::STATUS_BANNED, Yii::t('yee', 'Banned'), 'default'],
+                            [User::STATUS_ACTIVE, Yii::t('rave', 'Active'), 'primary'],
+                            [User::STATUS_INACTIVE, Yii::t('rave', 'Inactive'), 'info'],
+                            [User::STATUS_BANNED, Yii::t('rave', 'Banned'), 'default'],
                         ],
                         'options' => ['style' => 'width:60px']
                     ],

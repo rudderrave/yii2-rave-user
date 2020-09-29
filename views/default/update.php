@@ -6,8 +6,8 @@ use yii\helpers\Html;
  * @var yii\web\View $this
  * @var ravesoft\models\User $model
  */
-$this->title = Yii::t('yee/user', 'Update User');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Users'), 'url' => ['index']];
+$this->title = Yii::t('rave/user', 'Update User');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Users'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>

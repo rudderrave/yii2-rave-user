@@ -41,11 +41,11 @@ use ravesoft\widgets\ActiveForm;
 
                         <div class="form-group">
                             <?php if ($model->isNewRecord): ?>
-                                <?= Html::submitButton(Yii::t('yee', 'Create'), ['class' => 'btn btn-primary']) ?>
-                                <?= Html::a(Yii::t('yee', 'Cancel'), ['/user/permission/index'], ['class' => 'btn btn-default']) ?>
+                                <?= Html::submitButton(Yii::t('rave', 'Create'), ['class' => 'btn btn-primary']) ?>
+                                <?= Html::a(Yii::t('rave', 'Cancel'), ['/user/permission/index'], ['class' => 'btn btn-default']) ?>
                             <?php else: ?>
-                                <?= Html::submitButton(Yii::t('yee', 'Save'), ['class' => 'btn btn-primary']) ?>
-                                <?= Html::a(Yii::t('yee', 'Delete'), ['delete', 'id' => $model->name], [
+                                <?= Html::submitButton(Yii::t('rave', 'Save'), ['class' => 'btn btn-primary']) ?>
+                                <?= Html::a(Yii::t('rave', 'Delete'), ['delete', 'id' => $model->name], [
                                     'class' => 'btn btn-default',
                                     'data' => [
                                         'confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),

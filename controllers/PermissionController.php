@@ -34,8 +34,8 @@ class PermissionController extends BaseController
         $routes = Route::find()->asArray()->all();
 
         $permissions = Permission::find()
-            ->andWhere(['not in', Yii::$app->yee->auth_item_table . '.name',
-                [Yii::$app->yee->commonPermissionName, $id]])
+            ->andWhere(['not in', Yii::$app->rave->auth_item_table . '.name',
+                [Yii::$app->rave->commonPermissionName, $id]])
             ->joinWith('group')
             ->all();
 
@@ -72,7 +72,7 @@ class PermissionController extends BaseController
         Permission::addChildren($item->name, $toAdd);
         Permission::removeChildren($item->name, $toRemove);
 
-        Yii::$app->session->setFlash('crudMessage', Yii::t('yee', 'Saved'));
+        Yii::$app->session->setFlash('crudMessage', Yii::t('rave', 'Saved'));
 
         return $this->redirect(['view', 'id' => $id]);
     }
@@ -99,13 +99,13 @@ class PermissionController extends BaseController
         Permission::addChildren($id, $toAdd);
         Permission::removeChildren($id, $toRemove);
 
-        if (($toAdd OR $toRemove) AND ($id == Yii::$app->yee->commonPermissionName)) {
+        if (($toAdd OR $toRemove) AND ($id == Yii::$app->rave->commonPermissionName)) {
             Yii::$app->cache->delete('__commonRoutes');
         }
 
         AuthHelper::invalidatePermissions();
 
-        Yii::$app->session->setFlash('crudMessage', Yii::t('yee', 'Saved'));
+        Yii::$app->session->setFlash('crudMessage', Yii::t('rave', 'Saved'));
 
         return $this->redirect(['view', 'id' => $id]);
     }

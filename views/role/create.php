@@ -7,9 +7,9 @@
  */
 use yii\helpers\Html;
 
-$this->title = Yii::t('yee/user', 'Create Role');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Users'), 'url' => ['/user/default/index']];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Roles'), 'url' => ['/user/role/index']];
+$this->title = Yii::t('rave/user', 'Create Role');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Users'), 'url' => ['/user/default/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Roles'), 'url' => ['/user/role/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

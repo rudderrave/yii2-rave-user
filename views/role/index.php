@@ -12,8 +12,8 @@ use yii\widgets\Pjax;
  * @var ravesoft\user\models\search\RoleSearch $searchModel
  * @var yii\web\View $this
  */
-$this->title = Yii::t('yee/user', 'Roles');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/user', 'Users'), 'url' => ['/user/default/index']];
+$this->title = Yii::t('rave/user', 'Roles');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/user', 'Users'), 'url' => ['/user/default/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row">
         <div class="col-sm-12">
             <h3 class="lte-hide-title page-title"><?= Html::encode($this->title) ?></h3>
-            <?= Html::a(Yii::t('yee', 'Add New'), ['create'], ['class' => 'btn btn-sm btn-primary']) ?>
+            <?= Html::a(Yii::t('rave', 'Add New'), ['create'], ['class' => 'btn btn-sm btn-primary']) ?>
         </div>
     </div>
 
@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filterModel' => $searchModel,
                 'bulkActionOptions' => [
                     'gridId' => 'role-grid',
-                    'actions' => [Url::to(['bulk-delete']) => Yii::t('yee', 'Delete')]
+                    'actions' => [Url::to(['bulk-delete']) => Yii::t('rave', 'Delete')]
                 ],
                 'columns' => [
                     ['class' => 'ravesoft\grid\CheckboxColumn', 'options' => ['style' => 'width:10px']],
@@ -60,11 +60,11 @@ $this->params['breadcrumbs'][] = $this->title;
                         'buttons' => [
                             'view' => function ($url, $model, $key) {
                                 $options = array_merge([
-                                    'title' => Yii::t('yee', 'Settings'),
-                                    'aria-label' => Yii::t('yee', 'Settings'),
+                                    'title' => Yii::t('rave', 'Settings'),
+                                    'aria-label' => Yii::t('rave', 'Settings'),
                                     'data-pjax' => '0',
                                 ]);
-                                return Html::a(Yii::t('yee', 'Settings'), $url, $options);
+                                return Html::a(Yii::t('rave', 'Settings'), $url, $options);
                             }
                         ],
                     ],
