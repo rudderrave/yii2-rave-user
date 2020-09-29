@@ -1,6 +1,6 @@
 {
   "name": "rudderrave/yii2-rave-user",
-  "description": "User Module For Yee CMS use rest",
+  "description": "User Module For Rave CMS&ERP use RestApi",
   "license": "Apache-2.0",
   "authors": [
     {
